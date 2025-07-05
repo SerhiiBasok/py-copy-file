@@ -6,7 +6,7 @@ def copy_file(command: str) -> None:
     if parts[1] == parts[2]:
         return
     try:
-        with open(parts[1], "r") as file_out, open(parts[2], "w") as file_in:
-            file_in.write(file_out.read())
+        with open(parts[1], "r") as file_in, open(parts[2], "w") as file_out:
+            file_out.write(file_in.read())
     except FileNotFoundError:
         return
